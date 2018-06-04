@@ -3,4 +3,4 @@ This example uses the selenium/standalone-firefox image available from [Selenium
 To run the tests open two terminal windows and run:
 
 1. `docker-compose up --build`
-2. `docker exec -t app npm run test:e2e`
+2. `docker exec -it app npm run test:e2e`

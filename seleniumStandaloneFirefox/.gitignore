@@ -4,7 +4,7 @@
 /node_modules
 
 # output png
-/e2eTests/output
+# /e2eTests/output // commented out for inital example to be seen
 
 # misc
 .DS_Store

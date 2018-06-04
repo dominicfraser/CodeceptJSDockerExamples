@@ -5,4 +5,3 @@ Scenario('navigate to homepage', I => {
   I.saveScreenshot('frontpageScreenshot.png');
   I.see('Hello');
 });
-
