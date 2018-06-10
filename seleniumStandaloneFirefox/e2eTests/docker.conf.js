@@ -15,12 +15,11 @@ exports.config = {
       },
       coloredLogs: true,
       desiredCapabilities: {
-          acceptInsecureCerts: true,
-      }
+        acceptInsecureCerts: true,
+      },
     },
   },
   bootstrap: false,
   mocha: {},
   name: 'codeceptjs-docker',
 };
-  

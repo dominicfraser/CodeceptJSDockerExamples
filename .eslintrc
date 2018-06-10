@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "skyscanner",
+        "prettier"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "no-undef": "warn"
+    }
+}
