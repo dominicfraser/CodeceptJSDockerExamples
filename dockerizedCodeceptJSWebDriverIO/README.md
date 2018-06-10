@@ -12,6 +12,10 @@ To run the app for development use:
 
 `docker-compose up --build`
 
-To run the tests, use `docker-compose down` if required, then use:
+It is possible to run the tests with the below command while the app is already running, and the app will continue to run afterwards unless `docker-compose down` is explicitly used.
+
+To run the tests, either with the app already running or from cold, use:
 
 `docker-compose -f docker-compose.test.yml run --rm codeceptjs-container`
+
+This will run the tests then stop codeceptjs-container. `docker-compose down` will be necessary to stop express-app when you wish to do so. 
