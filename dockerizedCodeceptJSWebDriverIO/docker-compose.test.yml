@@ -1,0 +1,37 @@
+version: "2.1"
+services:
+  codeceptjs-container:
+    image: codeception/codeceptjs
+    depends_on:
+      express-app:
+        condition: service_healthy
+      selenium-firefox-container:
+        condition: service_started
+    environment:
+      - CODECEPT_ARGS=-c webdriverio.conf.js --steps
+      - HOST=selenium-firefox-container
+    volumes:
+      - ./e2eTests:/tests
+
+  express-app:
+    container_name: express-app
+    build: .
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./package.json:/package.json
+      - ./package-lock.json:/package-lock.json
+      - ./.gitignore:/.gitignore
+      - ./app:/app
+
+  selenium-firefox-container:
+      container_name: selenium-firefox-container
+      image: selenium/standalone-firefox:3.12.0-americium
+      shm_size: 2g
+      ports:
+        - "4444:4444"
