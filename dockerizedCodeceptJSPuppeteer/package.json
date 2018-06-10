@@ -1,0 +1,14 @@
+{
+  "name": "example-dockerized-codecept-with-puppeteer",
+  "version": "1.0.0",
+  "description": "Example of dockerizing CodeceptJS alongside an Express server.",
+  "author": "Dominic Fraser",
+  "license": "ISC",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {}
+}

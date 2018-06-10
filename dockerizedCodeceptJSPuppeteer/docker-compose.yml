@@ -1,0 +1,12 @@
+version: "2"
+services:
+  express-app:
+    container_name: express-app
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./package.json:/package.json
+      - ./package-lock.json:/package-lock.json
+      - ./.gitignore:/.gitignore
+      - ./app.js:/app.js
