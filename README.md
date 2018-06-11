@@ -8,6 +8,8 @@ This is a repository of examples of using [CodeceptJS](https://codecept.io/) in 
 - [CodeceptJS container with WebDriverIO and Selenium Standalone](./dockerizedCodeceptJSWebDriverIO)
 - [CodeceptJS container with multiple helpers](./dockerizedCodeceptJSMultipleHelpers)
   - Dockerizing CodeceptJS so it does not need to be installed in your main application
+- [How to extend Docker Compose files](./extendingComposeFiles)
+  - A nice way to keep Compose files DRY
 
 #### Linting:
 

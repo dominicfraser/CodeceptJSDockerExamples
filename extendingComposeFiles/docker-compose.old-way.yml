@@ -1,0 +1,27 @@
+version: "2.1"
+services:
+  codeceptjs-container:
+    image: codeception/codeceptjs
+    depends_on:
+      express-app:
+        condition: service_healthy
+    environment:
+      - CODECEPT_ARGS=-c puppeteer.conf.js --steps
+    volumes:
+      - ./e2eTests:/tests
+
+  express-app:
+    container_name: express-app
+    build: .
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./package.json:/package.json
+      - ./package-lock.json:/package-lock.json
+      - ./.gitignore:/.gitignore
+      - ./app:/app
