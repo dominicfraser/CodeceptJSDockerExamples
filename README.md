@@ -1,5 +1,16 @@
 This is a repository of examples of using [CodeceptJS](https://codecept.io/) in a Docker environment. Each directory aims to give a simple example of a different Docker setup, and should contain all the files needed to clone it and make it run.
 
+#### Contents:
+
+- [Selenium Standalone Firefox](./seleniumStandaloneFirefox)
+  - A WebDriverIO helper running CodeceptJS tests against a Selenium image containing a Selenium Server and Firefox
+- [CodeceptJS container with Puppeteer](./dockerizedCodeceptJSPuppeteer)
+- [CodeceptJS container with WebDriverIO and Selenium Standalone](./dockerizedCodeceptJSWebDriverIO)
+- [CodeceptJS container with multiple helpers](./dockerizedCodeceptJSMultipleHelpers)
+  - Dockerizing CodeceptJS so it does not need to be installed in your main application
+
+#### Linting:
+
 For linting [eslint-config-skyscanner](https://github.com/Skyscanner/eslint-config-skyscanner ) has been used, along with [prettier](https://github.com/prettier/prettier). This is not included in each directory, if you wish to add it duplicate the [.eslintrc](.eslintrc) and [.prettierrc](.prettierrc) and run:
 
 ```sh
@@ -13,5 +24,6 @@ then
 ```sh
 npm install eslint-config-prettier eslint-plugin-prettier prettier
 ```
+
 
 
