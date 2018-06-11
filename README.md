@@ -3,7 +3,8 @@ This is a repository of examples of using [CodeceptJS](https://codecept.io/) in 
 #### Contents:
 
 - [Selenium Standalone Firefox](./seleniumStandaloneFirefox)
-  - A WebDriverIO helper running CodeceptJS tests against a Selenium image containing a Selenium Server and Firefox
+- [Selenium Standalone Chrome](./seleniumStandaloneChrome)
+  - A WebDriverIO helper running CodeceptJS tests against a Selenium image containing a Selenium Server and Chrome/Firefox
 - [CodeceptJS container with Puppeteer](./dockerizedCodeceptJSPuppeteer)
 - [CodeceptJS container with WebDriverIO and Selenium Standalone](./dockerizedCodeceptJSWebDriverIO)
 - [CodeceptJS container with multiple helpers](./dockerizedCodeceptJSMultipleHelpers)

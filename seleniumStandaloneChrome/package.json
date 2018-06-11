@@ -1,0 +1,18 @@
+{
+  "name": "example-standalone-chrome",
+  "version": "1.0.0",
+  "description": "Example of using the selenium/standalone-chrome Docker image alongside CodeceptJS and an Express server.",
+  "author": "Dominic Fraser",
+  "license": "ISC",
+  "scripts": {
+    "start": "node app.js",
+    "test:e2e": "codeceptjs run --steps --verbose --config=./e2eTests/docker.conf.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "codeceptjs": "^1.2.0",
+    "webdriverio": "^4.12.0"
+  }
+}

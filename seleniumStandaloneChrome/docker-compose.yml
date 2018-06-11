@@ -1,0 +1,24 @@
+version: "2"
+services:
+  app-express:
+    container_name: app-express
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - chrome-container
+    volumes:
+      - ./e2eTests:/e2eTests
+      - ./package.json:/package.json
+      - ./package-lock.json:/package-lock.json
+      - ./.gitignore:/.gitignore
+      - ./app.js:/app.js
+
+  chrome-container:
+    container_name: chrome-container
+    image: selenium/standalone-chrome:3.12.0-americium
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - "4444:4444"
+    # can just be expose - 4444, but this allows you to see localhost:4444/wd/hub/static/resource/hub.html
