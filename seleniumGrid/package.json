@@ -1,0 +1,20 @@
+{
+  "name": "seleniumgrid",
+  "version": "1.0.0",
+  "description": "Selenium Grid with Chrome and Firefox",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test:e2e:chrome": "codeceptjs run --steps --verbose --config=./e2eTests/chrome.conf.js",
+    "test:e2e:firefox": "codeceptjs run --steps --verbose --config=./e2eTests/firefox.conf.js"
+  },
+  "author": "Dominic Fraser",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "codeceptjs": "^1.2.1",
+    "webdriverio": "^4.12.0"
+  }
+}

@@ -1,0 +1,40 @@
+version: "2"
+services:
+  app:
+    container_name: app
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      # - firefox
+      - chrome
+    volumes:
+      - ./e2eTests:/e2eTests
+      - ./package.json:/package.json
+      - ./package-lock.json:/package-lock.json
+      - ./.gitignore:/.gitignore
+      - ./app.js:/app.js
+
+  # firefox:
+  #   image: selenium/node-firefox:3.12.0-americium
+  #   volumes:
+  #     - /dev/shm:/dev/shm
+  #   depends_on:
+  #     - hub
+  #   environment:
+  #     HUB_HOST: hub
+
+  chrome:
+    image: selenium/node-chrome:3.12.0-americium
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+
+  hub:
+    container_name: hub
+    image: selenium/hub:3.12.0-americium
+    ports:
+      - "4444:4444"
