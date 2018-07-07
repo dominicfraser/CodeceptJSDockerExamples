@@ -23,9 +23,9 @@ For linting [eslint-config-skyscanner](https://github.com/Skyscanner/eslint-conf
     "$PKG@latest"
 )
 ```
-then 
+to setup eslint, and then the following to integrate prettier:
 ```sh
-npm install eslint-config-prettier eslint-plugin-prettier prettier
+npm install -D eslint-config-prettier eslint-plugin-prettier prettier
 ```
 
 
