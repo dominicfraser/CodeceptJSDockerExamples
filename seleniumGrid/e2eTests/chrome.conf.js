@@ -1,6 +1,6 @@
 exports.config = {
   tests: './*_test.js',
-  output: './output',
+  output: './output/chrome',
   helpers: {
     WebDriverIO: {
       url: 'http://app:3000',
@@ -19,6 +19,7 @@ exports.config = {
           args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
+            '--disable-gpu',
             '--allow-insecure-localhost',
           ],
         },

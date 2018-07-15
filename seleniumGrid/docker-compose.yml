@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      # - firefox
+      - firefox
       - chrome
     volumes:
       - ./e2eTests:/e2eTests
@@ -15,19 +15,17 @@ services:
       - ./.gitignore:/.gitignore
       - ./app.js:/app.js
 
-  # firefox:
-  #   image: selenium/node-firefox:3.12.0-americium
-  #   volumes:
-  #     - /dev/shm:/dev/shm
-  #   depends_on:
-  #     - hub
-  #   environment:
-  #     HUB_HOST: hub
+  firefox:
+    image: selenium/node-firefox:3.12.0-americium
+    shm_size: 2g
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
 
   chrome:
     image: selenium/node-chrome:3.12.0-americium
-    volumes:
-      - /dev/shm:/dev/shm
+    shm_size: 2g
     depends_on:
       - hub
     environment:
