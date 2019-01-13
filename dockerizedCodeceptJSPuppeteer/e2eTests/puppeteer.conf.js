@@ -6,6 +6,8 @@ exports.config = {
     Puppeteer: {
       url: 'http://localhost:5000',
       chrome: {
+        // https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#puppeteerlaunchoptions
+        // https://peter.sh/experiments/chromium-command-line-switches/
         args: ['--no-sandbox', '--disable-setuid-sandbox'],
       },
       waitForAction: 500,
