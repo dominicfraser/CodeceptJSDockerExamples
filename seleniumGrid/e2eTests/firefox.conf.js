@@ -2,7 +2,7 @@ exports.config = {
   tests: './*_test.js',
   output: './output/firefox',
   helpers: {
-    WebDriverIO: {
+    WebDriver: {
       url: 'http://app:3000',
       host: 'hub',
       browser: 'firefox',

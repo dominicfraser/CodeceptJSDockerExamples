@@ -1,6 +1,6 @@
 {
   "name": "seleniumgrid",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Selenium Grid with Chrome and Firefox",
   "main": "app.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
-    "codeceptjs": "^1.3.2",
-    "webdriverio": "^4.12.0"
+    "codeceptjs": "^2.0.2",
+    "webdriverio": "^5.2.2"
   }
 }

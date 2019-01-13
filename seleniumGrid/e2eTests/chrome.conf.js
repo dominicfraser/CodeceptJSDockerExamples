@@ -2,7 +2,7 @@ exports.config = {
   tests: './*_test.js',
   output: './output/chrome',
   helpers: {
-    WebDriverIO: {
+    WebDriver: {
       url: 'http://app:3000',
       host: 'hub',
       browser: 'chrome',
@@ -16,10 +16,11 @@ exports.config = {
       coloredLogs: true,
       desiredCapabilities: {
         chromeOptions: {
+          // https://peter.sh/experiments/chromium-command-line-switches/
           args: [
             '--no-sandbox',
             '--disable-setuid-sandbox',
-            '--disable-gpu',
+            '--disable-gpu', // Temporarily needed if running headless on Windows
             '--allow-insecure-localhost',
           ],
         },
