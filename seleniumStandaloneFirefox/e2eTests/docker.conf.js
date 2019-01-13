@@ -2,7 +2,7 @@ exports.config = {
   tests: './*_test.js',
   output: './output',
   helpers: {
-    WebDriverIO: {
+    WebDriver: {
       url: 'http://app:3000',
       host: 'firefox-container',
       browser: 'firefox',
@@ -15,6 +15,13 @@ exports.config = {
       },
       coloredLogs: true,
       desiredCapabilities: {
+        'moz:firefoxOptions': {
+          // https://developer.mozilla.org/en-US/docs/Web/WebDriver/Capabilities/firefoxOptions
+          args: ['-headless'],
+          prefs: {
+            'browser.display.use_focus_colors ': true,
+          },
+        },
         acceptInsecureCerts: true,
       },
     },

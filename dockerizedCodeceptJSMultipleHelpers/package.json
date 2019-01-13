@@ -1,6 +1,6 @@
 {
   "name": "example-dockerized-codecept-with-multiple-helpers",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Example of dockerizing CodeceptJS alongside an Express server.",
   "author": "Dominic Fraser",
   "license": "ISC",

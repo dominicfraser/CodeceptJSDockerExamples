@@ -2,7 +2,7 @@ exports.config = {
   tests: './*_test.js',
   output: './output',
   helpers: {
-    WebDriverIO: {
+    WebDriver: {
       url: 'http://app-express:3000',
       host: 'chrome-container',
       browser: 'chrome',

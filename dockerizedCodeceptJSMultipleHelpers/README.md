@@ -21,4 +21,4 @@ To run the tests, either with the app already running or from cold, a different 
 WebDriverIO helper: `docker-compose -f docker-compose.test.yml run --rm codeceptjs-container-webdriverio`
 Puppeteer helper: `docker-compose -f docker-compose.test.yml run --rm codeceptjs-container-puppeteer`
 
-This will run the tests then stop the specififed codeceptjs-container-<helper>. `docker-compose down` will be necessary to stop express-app when you wish to do so. 
+This will run the tests then stop the specified codeceptjs-container-< helper >. `docker-compose down` will be necessary to stop express-app when you wish to do so. 
