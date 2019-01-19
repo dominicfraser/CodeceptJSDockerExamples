@@ -12,7 +12,7 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
-    "codeceptjs": "^2.0.2",
-    "webdriverio": "^5.2.2"
+    "codeceptjs": "^2.0.3",
+    "webdriverio": "^5.3.0"
   }
 }
